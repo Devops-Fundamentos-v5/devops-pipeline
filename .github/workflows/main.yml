@@ -22,9 +22,5 @@ jobs:
       run: |
         chmod +x gradlew
         ./gradlew build 
-    - uses: actions/upload-artifact@v3
-      with:
-        name: my-artifact
-        path: .
     
     

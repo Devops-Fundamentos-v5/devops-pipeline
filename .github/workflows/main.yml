@@ -18,6 +18,9 @@ jobs:
         java-version: '11'
         distribution: 'zulu'
 
+    - name: Secret
+      run: echo ${{ secrets.TOKEN_SONARCLOUD }}
+    
     - name: Compile Gradle
       run: |
         chmod +x gradlew

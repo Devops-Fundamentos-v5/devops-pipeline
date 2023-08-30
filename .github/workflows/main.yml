@@ -24,12 +24,8 @@ jobs:
     - name: Compile Gradle
       run: |
         chmod +x gradlew
-        ./gradlew build -x test
+        ./gradlew build
     
-    - uses: actions/upload-artifact@v3
-      with:
-        name: my-artifact
-        path: build/libs/**
     - name: Analisis SonarCloud
       run: |
         chmod +x gradlew 

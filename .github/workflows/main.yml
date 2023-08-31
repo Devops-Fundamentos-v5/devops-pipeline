@@ -47,7 +47,7 @@ jobs:
 
     - name: Docker Build 
       run: | 
-        docker build --tag clagosu/pet-clinic:latest $GITHUB_WORKSPACE/deploy
+        docker build --tag clagosu/pet-clinic:latest .
         docker images
 
          

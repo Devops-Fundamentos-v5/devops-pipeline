@@ -54,11 +54,13 @@ jobs:
       run : |
         docker push clagosu/pet-clinic
   deploy: 
+    needs: build
     runs-on: self-hosted
     steps:
     
-    - name: Validate
-      run: echo "hola mundo"
+    - name: Deploy Kubernetes
+      run: |
+        kubectl apply -f $GITHUB_WORKSPACE/deploy/deployment.yaml
   
 
          

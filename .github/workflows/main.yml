@@ -31,7 +31,7 @@ jobs:
     - name: Copia de Jar a Raiz 
       run: |
         cp $GITHUB_WORKSPACE/build/libs/spring-petclinic-2.6.0.jar .
-        chmod 555 spring-petclinic-2.6.0.jar
+        chmod 777 spring-petclinic-2.6.0.jar
         ls -lt 
     
     - name: Analisis SonarCloud

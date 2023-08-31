@@ -37,6 +37,11 @@ jobs:
         username: $ {{ secrets.DOCKER_USERNAME }}
         password: $ {{ secrets.DOCKER_PASSWORD }}
 
+    - name: Docker Build 
+      run: | 
+        docker build --tag clagosu/pet-clinic:latest $GITHUB_WORKSPACE/deploy
+        docker images
+
     
     
     

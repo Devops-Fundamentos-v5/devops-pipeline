@@ -53,7 +53,13 @@ jobs:
     - name: Docker Push
       run : |
         docker push clagosu/pet-clinic
-       
+  deploy: 
+    runs-on: self-hosted
+    steps:
+    
+    - name: Validate
+      run: echo "hola mundo"
+  
 
          
 
